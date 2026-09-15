@@ -13,6 +13,7 @@ Total amount you can rob = 1 + 3 = 4.'''
 
 
 
+from typing import List
 class Solution:
     def rob(self, nums: List[int]) -> int:
         if len(nums)==0:
@@ -27,3 +28,7 @@ class Solution:
         for i in range(2,len(nums)):
             dp[i]=max(dp[i-1],nums[i]+dp[i-2])
         return dp[len(nums)-1]
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.rob(nums))

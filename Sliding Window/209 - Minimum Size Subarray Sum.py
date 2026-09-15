@@ -22,6 +22,7 @@ Output: 0'''
 
 
 
+from typing import List
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         l=0
@@ -37,3 +38,8 @@ class Solution:
         if s!=float('inf'):
             return s
         return 0
+
+Solution = Solution()
+target = int(input("Enter the target sum: "))
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.minSubArrayLen(target, nums))

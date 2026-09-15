@@ -10,6 +10,8 @@ Explanation: The first two digits or the last three digits are consecutive 1s. T
 
 
 
+
+from typing import List
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
         l=[]
@@ -21,3 +23,7 @@ class Solution:
                 c=0
             l.append(c)
         return max(l)
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.findMaxConsecutiveOnes(nums))

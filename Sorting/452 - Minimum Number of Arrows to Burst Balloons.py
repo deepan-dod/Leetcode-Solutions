@@ -16,6 +16,7 @@ Explanation: The balloons can be burst by 2 arrows:
 
 
 
+from typing import List
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
         points.sort(key=lambda x:x[1])
@@ -26,3 +27,15 @@ class Solution:
                 arrows+=1
                 a=end
         return arrows
+
+Solution = Solution()
+points = []
+while True:
+    try:
+        line = input()
+        if not line:
+            break
+        points.append(list(map(int, line.split(","))))
+    except EOFError:
+        break
+print(Solution.findMinArrowShots(points))

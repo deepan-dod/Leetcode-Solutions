@@ -11,6 +11,7 @@ Output: 2'''
 
 
 
+from typing import List
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         c=0
@@ -25,3 +26,8 @@ class Solution:
             else:
                 f[p]+=1
         return c
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+k = int(input("Enter the value of k: "))
+print(Solution.subarraySum(nums, k))

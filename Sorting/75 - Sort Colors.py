@@ -13,6 +13,7 @@ Output: [0,0,1,1,2,2]'''
 
 
 
+from typing import List
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
@@ -25,3 +26,8 @@ class Solution:
                 nums[j+1]=nums[j]
                 j-=1
             nums[j+1]=k
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+Solution.sortColors(nums)
+print(nums)

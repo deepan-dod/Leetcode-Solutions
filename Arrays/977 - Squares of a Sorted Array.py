@@ -11,6 +11,8 @@ After sorting, it becomes [0,1,9,16,100].'''
 
 
 
+
+from typing import List
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         for i in range(len(nums)):
@@ -18,3 +20,7 @@ class Solution:
             nums[i]=s
         nums.sort()
         return nums
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.sortedSquares(nums))

@@ -11,7 +11,7 @@ Output: [1,3,12,0,0]'''
 
 
 
-
+from typing import List
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         l=len(nums)
@@ -22,3 +22,7 @@ class Solution:
                 nums.append(0)
             i+=1
         return nums
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.moveZeroes(nums))

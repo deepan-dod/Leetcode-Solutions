@@ -13,6 +13,7 @@ Output: [24,12,8,6]'''
 
 
 
+from typing import List
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n=len(nums)
@@ -28,3 +29,7 @@ class Solution:
         for i in range(n):
             dp[i]=l[i]*l1[i]
         return dp
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.productExceptSelf(nums))

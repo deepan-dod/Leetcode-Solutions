@@ -14,6 +14,7 @@ Output: [1,2,3,4,5,6,7,8,9,11,12,15,22]'''
 
 
 
+from typing import List
 class Solution:
     def selfDividingNumbers(self, left: int, right: int) -> List[int]:
         l=[]
@@ -30,3 +31,8 @@ class Solution:
                 if s==0:
                     l.append(i)
         return l
+
+Solution = Solution()
+left = int(input("Enter left range: "))
+right = int(input("Enter right range: "))
+print(Solution.selfDividingNumbers(left, right))

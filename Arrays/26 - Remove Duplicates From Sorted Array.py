@@ -14,6 +14,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 
 
+from typing import List
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         if len(nums)==0:
@@ -25,3 +26,7 @@ class Solution:
                     nums[c]=nums[i]
                     c+=1
             return c
+        
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.removeDuplicates(nums))

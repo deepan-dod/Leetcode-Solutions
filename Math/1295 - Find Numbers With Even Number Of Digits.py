@@ -16,6 +16,7 @@ Therefore only 12 and 7896 contain an even number of digits.'''
 
 
 
+from typing import List
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
         count_even=0
@@ -27,3 +28,7 @@ class Solution:
             if count_digit%2==0:
                 count_even+=1
         return count_even
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.findNumbers(nums))

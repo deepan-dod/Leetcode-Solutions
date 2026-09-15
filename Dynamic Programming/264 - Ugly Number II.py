@@ -12,6 +12,7 @@ Explanation: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ug
 
 
 
+from typing import List
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
         dp=[0]*n
@@ -26,3 +27,7 @@ class Solution:
             if dp[i]==dp[c]*5:
                 c+=1
         return dp[n-1]
+
+Solution = Solution()
+n = int(input("Enter the integer n: "))
+print(Solution.nthUglyNumber(n))

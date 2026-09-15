@@ -14,6 +14,7 @@ Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.'''
 
 
 
+from typing import List
 class Solution:
     def fib(self, n: int) -> int:
         if n==0:
@@ -21,3 +22,7 @@ class Solution:
         if n==1:
             return 1
         return self.fib(n-1)+self.fib(n-2)
+
+Solution = Solution()
+n = int(input("Enter a number: "))
+print(Solution.fib(n))

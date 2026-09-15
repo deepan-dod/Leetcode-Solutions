@@ -20,6 +20,7 @@ Explanation: Alice will always lose. Her best move will be to take three piles a
 
 
 
+from typing import List
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
@@ -38,3 +39,7 @@ class Solution:
         if dp[0] > 0:
             return "Alice"
         return "Bob"
+
+Solution = Solution()
+stoneValue = list(map(int, input("Enter the array of stone values separated by commas: ").split(",")))
+print(Solution.stoneGameIII(stoneValue))

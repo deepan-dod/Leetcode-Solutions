@@ -14,6 +14,7 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
 
 
 
+from typing import List
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         i,a=0,0
@@ -26,3 +27,7 @@ class Solution:
             else:
                 j-=1
         return a
+
+Solution = Solution()
+height = list(map(int, input("Enter the heights separated by commas: ").split(",")))
+print(Solution.maxArea(height))

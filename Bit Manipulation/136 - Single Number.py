@@ -18,9 +18,15 @@ Output: 4'''
 
 
 
+
+from typing import List
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         i=0
         for n in nums:
             i^=n
         return i
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.singleNumber(nums))

@@ -29,3 +29,7 @@ class Solution:
             else:
                 i+=1
         return "".join(s)
+
+Solution = Solution()
+s = input("Enter a string: ")
+print(Solution.reverseOnlyLetters(s))

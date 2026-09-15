@@ -20,6 +20,7 @@ There are two ways to reach the bottom-right corner:
 
 
 
+from typing import List
 class Solution:
     def uniquePathsWithObstacles(self, Grid: List[List[int]]) -> int:
         n=len(Grid)
@@ -37,3 +38,12 @@ class Solution:
                 if j>0:
                     dp[i][j]+=dp[i][j-1]
         return dp[n-1][m-1] 
+
+Solution = Solution()
+rows = int(input("Enter the number of rows in the grid: "))
+cols = int(input("Enter the number of columns in the grid: "))
+grid = []
+for _ in range(rows):
+    row = list(map(int, input("Enter the row elements separated by commas: ").split(",")))
+    grid.append(row)
+print(Solution.uniquePathsWithObstacles(grid))

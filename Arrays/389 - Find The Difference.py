@@ -14,6 +14,8 @@ Explanation: 'e' is the letter that was added.'''
 
 
 
+
+from typing import List
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         s=list(s)
@@ -24,3 +26,8 @@ class Solution:
             if s[i]!=t[i]:
                 return t[i]
         return t[-1]
+
+Solution = Solution()
+s = input()
+t = input()
+print(Solution.findTheDifference(s, t))

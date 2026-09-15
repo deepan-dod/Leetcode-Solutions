@@ -12,6 +12,7 @@ Note that [10, 5, 2] is not included as the product of 100 is not strictly less 
 
 
 
+from typing import List
 class Solution:
     def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
         l=0
@@ -24,3 +25,8 @@ class Solution:
                 l+=1
             c+=r-l+1
         return c
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+k = int(input("Enter the integer k: "))
+print(Solution.numSubarrayProductLessThanK(nums, k))

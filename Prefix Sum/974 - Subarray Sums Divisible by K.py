@@ -13,6 +13,7 @@ Explanation: There are 7 subarrays with a sum divisible by k = 5:
 
 
 
+from typing import List
 class Solution:
     def subarraysDivByK(self, nums: List[int], k: int) -> int:
         c=0
@@ -29,3 +30,8 @@ class Solution:
             elif m not in f:
                 f[m]=1
         return c
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+k = int(input("Enter the value of k: "))
+print(Solution.subarraysDivByK(nums, k))

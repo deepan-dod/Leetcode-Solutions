@@ -16,6 +16,7 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167'''
 
 
 
+from typing import List
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
         n=len(nums)
@@ -27,3 +28,7 @@ class Solution:
                     c=nums[i-1]*nums[k]*nums[j+1]+dp[i][k-1]+dp[k+1][j]
                     dp[i][j]=max(dp[i][j],c)
         return dp[1][n]
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.maxCoins(nums))

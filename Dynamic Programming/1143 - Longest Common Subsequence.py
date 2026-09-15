@@ -15,6 +15,7 @@ Explanation: The longest common subsequence is "ace" and its length is 3.'''
 
 
 
+from typing import List
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         s=len(text1)
@@ -27,3 +28,8 @@ class Solution:
                 else:
                     dp[i][j]=max(dp[i-1][j],dp[i][j-1])
         return dp[s-1][k-1]
+
+Solution = Solution()
+text1 = input("Enter the first string text1: ")
+text2 = input("Enter the second string text2: ")
+print(Solution.longestCommonSubsequence(text1, text2))

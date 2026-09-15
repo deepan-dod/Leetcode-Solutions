@@ -15,6 +15,7 @@ merged: a p b q c r'''
 
 
 
+from typing import List
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         s=""
@@ -27,3 +28,8 @@ class Solution:
         else:
             s+=word1[r:]
         return s
+
+Solution = Solution()
+word1 = input("Enter the first string: ")
+word2 = input("Enter the second string: ")
+print(Solution.mergeAlternately(word1, word2))

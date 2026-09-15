@@ -18,6 +18,7 @@ Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 
 
 
 
+from typing import List
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:
         n = len(nums)
@@ -31,3 +32,8 @@ class Solution:
             elif i - pref[p] >= 2:
                 return True
         return False
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+k = int(input("Enter the value of k: "))
+print(Solution.checkSubarraySum(nums, k))

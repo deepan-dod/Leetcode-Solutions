@@ -12,6 +12,7 @@ Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2)
 
 
 
+from typing import List
 class Solution:
     def rob(self, nums: List[int]) -> int:
         n=len(nums)
@@ -32,3 +33,7 @@ class Solution:
         for i in range(3,n):
             dp1[i]=max(dp1[i-1],nums[i]+dp1[i-2])
         return max(dp[n-2],dp1[n-1])
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.rob(nums))

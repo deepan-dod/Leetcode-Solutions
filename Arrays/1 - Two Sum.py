@@ -15,6 +15,7 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].'''
 
 
 
+from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         f={}
@@ -22,3 +23,9 @@ class Solution:
             if target-x in f:
                 return [f[target-x],i]
             f[x]=i
+
+
+solution = Solution()
+nums = list(map(int, input().split(", ")))
+target = int(input())
+print(solution.twoSum(nums, target))

@@ -25,3 +25,8 @@ class Solution:
         if i==len(s):
             return True
         return False  
+
+Solution = Solution()
+s = input("Enter the first string (s): ")
+t = input("Enter the second string (t): ")
+print(Solution.isSubsequence(s, t))

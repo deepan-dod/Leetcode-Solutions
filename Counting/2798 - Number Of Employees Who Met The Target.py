@@ -22,6 +22,7 @@ There are 3 employees who met the target.'''
 
 
 
+from typing import List
 class Solution:
     def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:
         n=0
@@ -29,3 +30,8 @@ class Solution:
             if i>=target:
                 n+=1
         return n
+
+Solution = Solution()
+hours = list(map(int, input().split(", ")))
+target = int(input("Enter target: "))
+print(Solution.numberOfEmployeesWhoMetTarget(hours, target))

@@ -11,6 +11,7 @@ Output: 3'''
 
 
 
+from typing import List
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         n=len(nums)//2
@@ -18,3 +19,7 @@ class Solution:
         for i in s:
             if nums.count(i)>n:
                 return i
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.majorityElement(nums))

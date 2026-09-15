@@ -17,6 +17,7 @@ The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above)
 
 
 
+from typing import List
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
         n = len(triangle)
@@ -25,3 +26,11 @@ class Solution:
             for j in range(i + 1):
                 dp[j] = triangle[i][j] + min(dp[j], dp[j + 1])
         return dp[0]
+
+Solution = Solution()
+rows = int(input("Enter the number of rows in the triangle: "))
+triangle = []
+for _ in range(rows):
+    row = list(map(int, input("Enter the row elements separated by commas: ").split(",")))
+    triangle.append(row)
+print(Solution.minimumTotal(triangle))

@@ -22,3 +22,7 @@ class Solution:
             d.add(s[i])
             c=max(c,i-l+1)
         return c
+
+Solution = Solution()
+s = input("Enter a string: ")
+print("Length of the longest substring without repeating characters:", Solution.lengthOfLongestSubstring(s))

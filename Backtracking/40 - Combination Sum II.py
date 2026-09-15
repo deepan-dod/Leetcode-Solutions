@@ -19,6 +19,8 @@ Output:
 
 
 
+
+from typing import List
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         n=len(candidates)
@@ -39,3 +41,8 @@ class Solution:
 
         f(0,0,[])
         return l
+
+Solution = Solution()
+candidates = list(map(int, input().split(", ")))
+target = int(input("Enter target: "))
+print(Solution.combinationSum2(candidates, target))

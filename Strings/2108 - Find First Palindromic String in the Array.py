@@ -13,9 +13,14 @@ Note that "racecar" is also palindromic, but it is not the first.'''
 
 
 
+from typing import List
 class Solution:
     def firstPalindrome(self, words: List[str]) -> str:
         for i in words:
             if i==i[::-1]:
                 return i
         return ""
+
+Solution = Solution()
+words = input("Enter a list of strings separated by commas: ").split(",")
+print(Solution.firstPalindrome(words))

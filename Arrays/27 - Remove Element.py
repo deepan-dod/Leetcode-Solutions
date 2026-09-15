@@ -15,7 +15,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 
 
-
+from typing import List
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         l=0
@@ -26,3 +26,8 @@ class Solution:
             if nums[i]!=val:
                 l+=1
         return l
+    
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+val = int(input())
+print(Solution.removeElement(nums, val))

@@ -23,6 +23,7 @@ numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3'''
 
 
 
+from typing import List
 class NumArray:
 
     def __init__(self, nums: List[int]):
@@ -39,6 +40,11 @@ class NumArray:
             return self.p[right]
         return self.p[left]
 
+nums = list(map(int, input().split(", ")))
+obj = NumArray(nums)
+left = int(input("Enter left index: "))
+right = int(input("Enter right index: "))
+print(obj.sumRange(left, right))
 
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)

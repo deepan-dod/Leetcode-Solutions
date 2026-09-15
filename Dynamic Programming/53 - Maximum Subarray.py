@@ -10,6 +10,7 @@ Explanation: The subarray [4,-1,2,1] has the largest sum 6.'''
 
 
 
+from typing import List
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         n=len(nums)
@@ -18,3 +19,7 @@ class Solution:
         for i in range(1,n):
             dp[i]=max(nums[i],dp[i-1]+nums[i])
         return max(dp)
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.maxSubArray(nums))

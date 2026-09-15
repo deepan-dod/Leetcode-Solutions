@@ -20,6 +20,7 @@ The maximum product is 3.'''
 
 
 
+from typing import List
 class Solution:
     def maxProduct(self, n: int) -> int:
         n=str(n)
@@ -28,3 +29,7 @@ class Solution:
             l.append(int(i))
         l.sort()
         return l[-1]*l[-2]
+
+Solution = Solution()
+n = int(input("Enter a positive integer: "))
+print(Solution.maxProduct(n))

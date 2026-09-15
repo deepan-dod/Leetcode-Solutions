@@ -26,6 +26,7 @@ Explanation: 14 is not ugly since it includes the prime factor 7.'''
 
 
 
+from typing import List
 class Solution:
     def isUgly(self, n: int) -> bool:
         if n<=0:
@@ -39,3 +40,7 @@ class Solution:
         if n==1:
             return True
         return False
+
+Solution = Solution()
+n = int(input("Enter a number: "))
+print(Solution.isUgly(n))

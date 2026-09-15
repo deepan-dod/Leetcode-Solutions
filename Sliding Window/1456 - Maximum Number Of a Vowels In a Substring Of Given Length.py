@@ -35,3 +35,8 @@ class Solution:
             i+=1
             j+=1
         return d
+
+Solution = Solution()
+s = input("Enter the string s: ")
+k = int(input("Enter the integer k: "))
+print(Solution.maxVowels(s, k))

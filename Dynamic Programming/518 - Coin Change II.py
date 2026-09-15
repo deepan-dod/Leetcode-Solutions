@@ -20,6 +20,7 @@ Explanation: there are four ways to make up the amount:
 
 
 
+from typing import List
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         n=len(coins)
@@ -35,3 +36,8 @@ class Solution:
                     t=dp[i][j-coins[i]]
                 dp[i][j]=k+t
         return dp[n-1][amount]
+
+Solution = Solution()
+amount = int(input("Enter the total amount: "))
+coins = list(map(int, input("Enter the array of coin denominations separated by commas: ").split(",")))
+print(Solution.change(amount, coins))

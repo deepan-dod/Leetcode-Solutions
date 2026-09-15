@@ -12,6 +12,8 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].'''
 
 
 
+
+from typing import List
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         l=[]
@@ -20,3 +22,7 @@ class Solution:
             s+=i
             l.append(s)
         return l
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.runningSum(nums))

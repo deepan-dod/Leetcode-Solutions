@@ -17,6 +17,7 @@ These are the only two combinations.'''
 
 
 
+from typing import List
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         n=len(candidates)
@@ -35,3 +36,8 @@ class Solution:
         
         f(0,0,[])
         return l
+
+Solution = Solution()
+candidates = list(map(int, input().split(", ")))
+target = int(input("Enter target: "))
+print(Solution.combinationSum(candidates, target))

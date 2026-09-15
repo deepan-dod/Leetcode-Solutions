@@ -13,6 +13,7 @@ Explanation: There are 3 positive integers and 3 negative integers. The maximum 
 
 
 
+from typing import List
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
         n=0
@@ -23,3 +24,7 @@ class Solution:
             if i>0:
                 p+=1
         return max(n,p)
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.maximumCount(nums))

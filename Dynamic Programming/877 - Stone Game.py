@@ -21,7 +21,7 @@ This demonstrated that taking the first 5 was a winning move for Alice, so we re
 
 
 
-
+from typing import List
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         piles.sort(reverse=True)
@@ -34,3 +34,7 @@ class Solution:
         if dp[n-2]>dp[n-1]:
             return True
         return False
+
+Solution = Solution()
+piles = list(map(int, input("Enter the array of piles separated by commas: ").split(",")))
+print(Solution.stoneGame(piles))

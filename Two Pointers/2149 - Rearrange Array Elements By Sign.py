@@ -20,6 +20,7 @@ Other ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are inco
 
 
 
+from typing import List
 class Solution:
     def rearrangeArray(self, nums: List[int]) -> List[int]:
         l=[0]*len(nums)
@@ -37,3 +38,7 @@ class Solution:
                 j+=2
             i+=1
         return l
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.rearrangeArray(nums))

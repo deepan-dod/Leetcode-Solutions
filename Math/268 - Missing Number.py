@@ -14,7 +14,12 @@ n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the
 
 
 
+from typing import List
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         n=len(nums)
         return n*(n+1)//2 - sum(nums)
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.missingNumber(nums))

@@ -12,6 +12,8 @@ Explanation: 9 exists in nums and its index is 4'''
 
 
 
+
+from typing import List
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         f=0
@@ -25,3 +27,8 @@ class Solution:
             else:
                 l=m+1
         return -1
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+target = int(input("Enter target: "))
+print(Solution.search(nums, target))

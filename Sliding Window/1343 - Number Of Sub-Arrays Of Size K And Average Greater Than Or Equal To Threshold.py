@@ -10,6 +10,7 @@ Explanation: Sub-arrays [2,5,5],[5,5,5] and [5,5,8] have averages 4, 5 and 6 res
 
 
 
+from typing import List
 class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         c=0
@@ -28,3 +29,9 @@ class Solution:
             i+=1
             j+=1
         return c
+
+Solution = Solution()
+arr = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+k = int(input("Enter the integer k: "))
+threshold = int(input("Enter the threshold: "))
+print(Solution.numOfSubarrays(arr, k, threshold))

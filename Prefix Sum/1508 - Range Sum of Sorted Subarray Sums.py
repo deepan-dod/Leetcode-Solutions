@@ -12,6 +12,7 @@ Explanation: All subarray sums are 1, 3, 6, 10, 2, 5, 9, 3, 7, 4. After sorting 
 
 
 
+from typing import List
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         MOD=(10**9)+7
@@ -24,3 +25,10 @@ class Solution:
         p.sort()
         s=sum(p[left-1:right])
         return s%MOD
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array elements: ").split(", ")))
+n = len(nums)
+left = int(input("Enter the left index: "))
+right = int(input("Enter the right index: "))
+print(Solution.rangeSum(nums, n, left, right))

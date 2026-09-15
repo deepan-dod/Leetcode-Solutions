@@ -19,6 +19,8 @@ Explanation: We have the following two paths:
 
 
 
+
+from typing import List
 class Solution:
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
         sx,sy=0,0
@@ -53,3 +55,11 @@ class Solution:
         
         backtrack(sx,sy,1)
         return c
+
+Solution = Solution()
+grid = []
+n = int(input("Enter number of rows: "))
+for _ in range(n):
+    row = list(map(int, input().split()))
+    grid.append(row)
+print(Solution.uniquePathsIII(grid))

@@ -33,6 +33,7 @@ Note: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal 
 
 
 
+from typing import List
 class Solution:
     def intToRoman(self, num: int) -> str:
         Integer=[1000,900,500,400,100,90,50,40,10,9,5,4,1]
@@ -45,3 +46,7 @@ class Solution:
                 num-=Integer[i]
             i+=1
         return roman_num
+
+Solution = Solution()
+num = int(input("Enter an integer: "))
+print(Solution.intToRoman(num))

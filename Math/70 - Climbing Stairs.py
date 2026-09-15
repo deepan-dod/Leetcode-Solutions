@@ -13,6 +13,8 @@ Explanation: There are two ways to climb to the top.
 2. 2 steps'''
 
 
+
+from math import comb
 'Method 1'
 class Solution:
     def climbStairs(self, n: int) -> int:
@@ -21,11 +23,6 @@ class Solution:
             ans+=comb(n-i,i)
         return ans
 
-
-'Method 2'
-class Solution:
-    def climbStairs(self, n: int) -> int:
-        a,b=1,1
-        for i in range(1,n+1):
-            a,b=b,a+b
-        return a
+Solution = Solution()
+n = int(input("Enter number of steps: "))
+print(Solution.climbStairs(n))

@@ -33,3 +33,8 @@ class Solution:
             i+=1
             j+=1
         return False
+
+Solution = Solution()
+s1 = input("Enter the first string (s1): ")
+s2 = input("Enter the second string (s2): ")
+print(Solution.checkInclusion(s1, s2))

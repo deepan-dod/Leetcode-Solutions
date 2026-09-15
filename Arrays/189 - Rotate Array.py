@@ -9,9 +9,16 @@ Output: [5,6,7,1,2,3,4]'''
 
 
 
+
+from typing import List
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         n=len(nums)
         k=k%n
         nums[:]=nums[-k:]+nums[:-k]
         return nums
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+k = int(input())
+print(Solution.rotate(nums, k))

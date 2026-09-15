@@ -15,9 +15,19 @@ Both customers are considered the richest with a wealth of 6 each, so return 6.'
 
 
 
+
+from typing import List
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         d=[]
         for i in accounts:
             d.append(sum(i))
         return max(d)
+
+Solution = Solution()
+accounts = []
+n = int(input("Enter number of customers: "))
+for _ in range(n):
+    row = list(map(int, input().split()))
+    accounts.append(row)
+print(Solution.maximumWealth(accounts))

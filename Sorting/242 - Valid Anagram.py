@@ -16,6 +16,7 @@ Output: false'''
 
 
 
+from typing import List
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         l=list(s)
@@ -24,3 +25,8 @@ class Solution:
             return True
         else:
             return False
+
+Solution = Solution()
+s = input()
+t = input()
+print(Solution.isAnagram(s, t))

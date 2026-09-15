@@ -28,3 +28,7 @@ class Solution:
                             m=j-i+1
                             a=s[i:j+1]
         return a
+
+Solution = Solution()
+s = input("Enter the string s: ")
+print(Solution.longestPalindrome(s))

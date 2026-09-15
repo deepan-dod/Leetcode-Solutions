@@ -17,6 +17,7 @@ The closest occurrence of 'e' for index 8 is at index 6, so the distance is abs(
 
 
 
+from typing import List
 class Solution:
     def shortestToChar(self, s: str, c: str) -> List[int]:
         n=len(s)
@@ -32,3 +33,8 @@ class Solution:
                 f = i
             r[i]=min(r[i],f-i)
         return r
+
+Solution = Solution()
+s = input()
+c = input()
+print(Solution.shortestToChar(s, c))

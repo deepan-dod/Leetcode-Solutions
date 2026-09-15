@@ -16,6 +16,7 @@ The vowels in s are ['I', 'e', 'e', 'A']. On reversing the vowels, s becomes "Ac
 
 
 
+from typing import List
 class Solution:
     def reverseVowels(self, s: str) -> str:
         s=list(s)
@@ -31,3 +32,7 @@ class Solution:
             i+=1
             j-=1
         return "".join(s)
+
+Solution = Solution()
+s = input("Enter a string: ")
+print(Solution.reverseVowels(s))

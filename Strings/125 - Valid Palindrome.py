@@ -12,6 +12,7 @@ Explanation: "amanaplanacanalpanama" is a palindrome.'''
 
 
 
+from typing import List
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         k=""
@@ -22,3 +23,7 @@ class Solution:
         if k==k[::-1]:
             return True
         return False
+
+Solution = Solution()
+s = input("Enter a string: ")
+print(Solution.isPalindrome(s))

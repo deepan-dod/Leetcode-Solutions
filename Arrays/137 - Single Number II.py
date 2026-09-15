@@ -11,9 +11,15 @@ Output: 3'''
 
 
 
+from collections import Counter
+from typing import List
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         d=Counter(nums)
         for key,value in d.items():
             if value==1:
                 return key
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.singleNumber(nums))

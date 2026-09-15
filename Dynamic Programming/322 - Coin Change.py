@@ -14,6 +14,7 @@ Explanation: 11 = 5 + 5 + 1'''
 
 
 
+from typing import List
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp=[float('inf')]*(amount+1)
@@ -24,3 +25,8 @@ class Solution:
                     if i+coin<=amount:
                         dp[i+coin]=min(dp[i+coin],1+dp[i])
         return dp[-1] if dp[-1]!=float('inf') else -1
+
+Solution = Solution()
+coins = list(map(int, input("Enter the array of coin denominations separated by commas: ").split(",")))
+amount = int(input("Enter the total amount: "))
+print(Solution.coinChange(coins, amount))

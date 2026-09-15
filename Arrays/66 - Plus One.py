@@ -14,6 +14,7 @@ Thus, the result should be [1,2,4].'''
 
 
 
+from typing import List
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         n=len(digits)
@@ -25,3 +26,7 @@ class Solution:
         else:
             digits.insert(0,1)
         return digits
+
+Solution = Solution()
+digits = list(map(int, input().split(", ")))
+print(Solution.plusOne(digits))

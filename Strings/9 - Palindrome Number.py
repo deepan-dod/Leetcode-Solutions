@@ -10,6 +10,7 @@ Explanation: 121 reads as 121 from left to right and from right to left.'''
 
 
 
+from typing import List
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         a=str(x)
@@ -18,3 +19,7 @@ class Solution:
             return True
         else:
             return False
+
+Solution = Solution()
+x = int(input("Enter an integer: "))
+print(Solution.isPalindrome(x))

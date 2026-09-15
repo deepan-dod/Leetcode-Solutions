@@ -16,6 +16,7 @@ Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We retu
 
 
 
+from typing import List
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         i,j=0,len(numbers)-1
@@ -27,3 +28,8 @@ class Solution:
                 i+=1
             else:
                 j-=1
+
+Solution = Solution()
+numbers = list(map(int, input("Enter the sorted array of numbers separated by commas: ").split(",")))
+target = int(input("Enter the target number: "))
+print(Solution.twoSum(numbers, target))

@@ -15,6 +15,7 @@ The result of the merge is [1,2,2,3,5,6] with the underlined elements coming fro
 
 
 
+from typing import List
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         k=0
@@ -22,3 +23,11 @@ class Solution:
             nums1[i]=nums2[k]
             k+=1
         nums1.sort()
+
+Solution = Solution()
+nums1 = list(map(int, input("Enter the first sorted array (nums1) separated by commas: ").split(",")))
+m = int(input("Enter the number of elements in nums1 (m): "))
+nums2 = list(map(int, input("Enter the second sorted array (nums2) separated by commas: ").split(",")))
+n = int(input("Enter the number of elements in nums2 (n): "))
+Solution.merge(nums1, m, nums2, n)
+print("Merged sorted array:", nums1)

@@ -14,6 +14,7 @@ You need to output 1.'''
 
 
 
+from typing import List
 class Solution:
     def findContentChildren(self, g: List[int], s: List[int]) -> int:
         g.sort()
@@ -30,3 +31,8 @@ class Solution:
             else:
                 i+=1
         return c
+
+Solution = Solution()
+g = list(map(int, input("Enter the greed factors of children separated by commas: ").split(",")))
+s = list(map(int, input("Enter the sizes of cookies separated by commas: ").split(",")))
+print(Solution.findContentChildren(g, s))

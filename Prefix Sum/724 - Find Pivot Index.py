@@ -19,6 +19,7 @@ Right sum = nums[4] + nums[5] = 5 + 6 = 11'''
 
 
 
+from typing import List
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         p=[0]*len(nums)
@@ -35,3 +36,7 @@ class Solution:
             if p[i]==s[i]:
                 return i
         return -1
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.pivotIndex(nums))

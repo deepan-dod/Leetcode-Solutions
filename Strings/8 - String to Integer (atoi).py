@@ -31,6 +31,7 @@ Step 3: "42" ("42" is read in)'''
 
 
 
+from typing import List
 class Solution:
     def myAtoi(self, s: str) -> int:
         s=s.strip()
@@ -55,3 +56,7 @@ class Solution:
         if n<=-2**31:
             return -2**31
         return n
+
+Solution = Solution()
+s = input("Enter a string: ")
+print(Solution.myAtoi(s))

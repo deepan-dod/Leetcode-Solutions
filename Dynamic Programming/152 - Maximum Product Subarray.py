@@ -14,7 +14,7 @@ Explanation: [2,3] has the largest product 6.'''
 
 
 
-
+from typing import List
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         r=max(nums)
@@ -25,3 +25,7 @@ class Solution:
             s=min(t,s*nums[i],nums[i])
             r=max(r,m)
         return r
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.maxProduct(nums))

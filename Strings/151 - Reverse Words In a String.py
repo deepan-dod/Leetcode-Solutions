@@ -15,7 +15,12 @@ Output: "blue is sky the"'''
 
 
 
+from typing import List
 class Solution:
     def reverseWords(self, s: str) -> str:
         a=s.split()
         return " ".join(a[::-1])
+
+Solution = Solution()
+s = input("Enter a string: ")
+print(Solution.reverseWords(s))

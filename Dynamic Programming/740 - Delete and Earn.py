@@ -16,6 +16,7 @@ You earn a total of 6 points.'''
 
 
 
+from typing import List
 class Solution:
     def deleteAndEarn(self, nums: List[int]) -> int:
         l=[0]*(max(nums)+1)
@@ -26,3 +27,7 @@ class Solution:
         for i in range(1,n):
             dp[i]=max(dp[i-1],l[i]+dp[i-2])
         return dp[n-1]
+
+Solution = Solution()
+nums = list(map(int, input("Enter the array of integers separated by commas: ").split(",")))
+print(Solution.deleteAndEarn(nums))

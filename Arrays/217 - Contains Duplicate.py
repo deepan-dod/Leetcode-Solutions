@@ -15,6 +15,7 @@ The element 1 occurs at the indices 0 and 3.'''
 
 
 
+from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         s=set(nums)
@@ -22,3 +23,7 @@ class Solution:
             return True
         else:
             return False
+
+Solution = Solution()
+nums = list(map(int, input().split(", ")))
+print(Solution.containsDuplicate(nums))

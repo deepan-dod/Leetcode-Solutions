@@ -12,6 +12,7 @@ The substring with start index = 6 is "bac", which is an anagram of "abc".'''
 
 
 
+from typing import List
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         if len(p)>len(s):
@@ -34,3 +35,8 @@ class Solution:
             i+=1
             j+=1
         return res
+
+Solution = Solution()
+s = input("Enter the string s: ")
+p = input("Enter the string p: ")
+print(Solution.findAnagrams(s, p))
